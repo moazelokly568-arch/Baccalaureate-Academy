@@ -1,0 +1,70 @@
+/* ============================================================================
+   Baccalaureate Academy - Custom RTL Arabic Educational Identity Styles
+   ============================================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap');
+
+:root {
+  --bacc-navy: #0b192c;
+  --bacc-teal: #0f766e;
+  --bacc-gold: #d97706;
+  --bacc-surface: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.bacc-hero-gradient {
+  background: linear-gradient(135deg, #091526 0%, #0f2942 45%, #0d4a4e 100%);
+}
+
+.bacc-card-hover {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.bacc-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -8px rgba(15, 23, 42, 0.12), 0 6px 12px -4px rgba(15, 118, 110, 0.08);
+}
+
+.bacc-scrollbar::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.bacc-scrollbar::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 9999px;
+}
+
+.bacc-scrollbar::-webkit-scrollbar-thumb {
+  background: #0f766e;
+  border-radius: 9999px;
+}
+
+.bacc-badge-pulse {
+  animation: baccPulse 2s infinite;
+}
+
+@keyframes baccPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
